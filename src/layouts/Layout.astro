@@ -1,0 +1,306 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <script is:inline src="/scripts/gsap.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "spooky";
+    src: url("/fonts/spooky.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --header-height: 3.5rem;
+    --first-color: hsl(0, 0%, 4%);
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(222, 100%, 2%);
+    --linear-color: linear-gradient(
+      to bottom,
+      hsl(210, 100%, 70%) 0%,
+      hsl(0, 17%, 51%) 100%
+    );
+
+    --body-font: "Montserrat", sans-serif;
+    --second-font: "spooky", cursive;
+    --biggest-font-size: 3rem;
+    --big-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+
+    --font-regular: 400;
+    --font-medium: 500;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 5rem;
+      --big-font-size: 3.5rem;
+      --h2-font-size: 1.5rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+  .home {
+    position: relative;
+    height: 100vh;
+    background-color: var(--black-color);
+  }
+  .home__container {
+    position: relative;
+    height: 70%;
+    background: var(--black-color);
+    display: grid;
+    justify-items: center;
+    overflow: hidden;
+  }
+  .home__container img {
+    position: absolute;
+  }
+  .home__mountainForest,
+  .home__gost {
+    bottom: 5rem;
+  }
+
+  .home__house {
+    bottom: 5rem;
+    width: 600px;
+  }
+  .home__eyeColor {
+    bottom: 3rem;
+    width: 195%;
+  }
+  .home__moon {
+    bottom: 15rem;
+    width: 590px;
+  }
+  .home__house,
+  .home__eyeColor,
+  .home__moon {
+    max-width: initial;
+  }
+
+  .home__points {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home__titles {
+    position: absolute;
+    bottom: 25rem;
+    text-align: center;
+  }
+  .home__subtitle,
+  .home__title {
+    color: var(--black-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-regular);
+    text-shadow: 0 2px 8px var(--first-color);
+  }
+
+  .home__subtitle {
+    font-size: var(--big-font-size);
+  }
+  .home__title {
+    font-size: var(--biggest-font-size);
+  }
+
+  .home__data {
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 9rem;
+    text-align: center;
+    margin-inline: 1.5rem;
+  }
+  .home__description {
+    margin: 0 auto;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+  .home__button {
+    width: 100px;
+    height: 100px;
+    display: inline-grid;
+    position: relative;
+    place-items: center;
+    transition: filter 0.4s;
+    background: red;
+  }
+
+  .home__button span {
+    position: absolute;
+    color: var(--white-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  @media screen and (max-width: 330px) {
+    .home {
+      min-height: 500px;
+      min-width: 330px;
+    }
+    .home__container {
+      margin: 0 auto;
+    }
+    .home__house {
+      bottom: 6rem;
+      width: 370px;
+    }
+    .home__gost,
+    .home__mountainForest {
+      bottom: 6rem;
+      width: 300%;
+    }
+    .home__eyeColor {
+      width: 300%;
+      bottom: 1rem;
+    }
+    .home__moon {
+      width: 520px;
+    }
+    .home__titles {
+      bottom: 22rem;
+    }
+    .home__data {
+      bottom: 10%;
+    }
+  }
+
+  @media screen and (min-width: 721px) {
+    .home__container {
+      height: 90%;
+    }
+    .home__moon {
+      bottom: 28rem;
+    }
+    .home__gost,
+    .home__mountainForest {
+      width: 200%;
+      bottom: 10rem;
+    }
+
+    .home__house {
+      width: 100%;
+      bottom: 9em;
+    }
+
+    .home__titles {
+      bottom: 75%;
+    }
+    .home__data {
+      bottom: 8rem;
+    }
+  }
+  @media screen and (min-width: 968px) {
+    .home {
+      height: initial;
+    }
+    .home__container {
+      height: 960px;
+    }
+
+    .home__moon {
+      width: 70%;
+      bottom: 28rem;
+    }
+
+    .home__house {
+      bottom: 17rem;
+      width: 770px;
+    }
+    .home__titles {
+      bottom: 40rem;
+    }
+    .home__gost {
+      bottom: 13rem;
+    }
+    .home__data {
+      bottom: 7rem;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .home {
+      height: initial;
+    }
+    .home__container {
+      margin: auto;
+      height: 960px;
+      max-width: 1400px;
+    }
+    .home__moon {
+      bottom: 26rem;
+    }
+    .home__house {
+      bottom: 14rem;
+      width: 900px;
+    }
+    .home__titles {
+      bottom: 42rem;
+    }
+    .home__mountainForest {
+      bottom: 6rem;
+    }
+    .home__eyeColor {
+      bottom: 0rem;
+    }
+    .home__subtitle {
+      font-size: var(--big-font-size);
+    }
+    .home__title {
+      line-height: 90%;
+      font-size: var(--biggest-font-size);
+    }
+  }
+</style>
