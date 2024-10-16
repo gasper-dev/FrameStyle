@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="3508px" height="2480px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3508 2480"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:#676764}
+    .fil1 {fill:#9CF2FF}
+    .fil3 {fill:#EDC917}
+    .fil0 {fill:#F7F8FA}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="GOST">
+   <g id="cuerpo">
+    <path class="fil0" d="M1701 2036l-2 1 39 7c0,-16 -3,-49 -3,-67 1,16 4,40 8,55 2,7 17,5 23,6 8,2 16,3 24,4 26,3 32,7 31,-25 0,-9 -4,-55 -3,-58l1 -1 10 76c12,-5 25,-30 44,-31l-172 33z"/>
+    <path class="fil1" d="M1706 2038c6,-3 -2,-38 -3,-46 -5,-48 -5,-109 3,-156 24,-71 96,-56 161,-35 -15,-55 -99,-53 -126,-41 -30,13 -43,37 -48,68 -11,63 -2,124 6,187 1,9 1,9 7,23z"/>
+    <path class="fil0" d="M1699 2037c6,-3 -4,-37 -5,-45 -6,-48 -10,-110 -2,-157 12,-72 70,-93 136,-72 77,30 53,178 45,242l-174 32zm49 -212c4,-10 22,-9 25,-1 4,1 14,33 -6,26 -10,-3 -27,-12 -19,-25zm47 3c2,-13 21,-19 27,-10 7,3 4,16 -2,21 -4,4 -18,10 -23,8l-2 0 0 -19z"/>
+   </g>
+   <g id="sejas">
+    <path class="fil2" d="M1795 1828c4,-4 4,-6 10,-9 7,-3 10,-2 17,-1 -6,-9 -25,-3 -27,10z"/>
+    <path class="fil2" d="M1748 1825c11,-4 14,-6 25,-1 -3,-8 -21,-9 -25,1z"/>
+   </g>
+   <g id="ojos">
+    <path class="fil3" d="M1800 1832l0 7 1 0c2,1 6,-2 8,-3 2,-2 2,-7 0,-8 -2,0 -3,0 -5,1 -2,1 -2,2 -4,3z"/>
+    <path class="fil3" d="M1768 1834c-3,4 3,7 5,8 7,2 4,-8 2,-8 -3,-2 -4,-1 -7,0z"/>
+   </g>
+  </g>
+ </g>
+ <animateTransform
+    attributeName="transform"
+    attributeType="XML"
+    type="translate"
+    from="0 0"
+    to="0 15"
+    dur="2s"
+    repeatCount="indefinite" 
+    additive="sum"/>
+    
+  <animate 
+    attributeName="opacity"
+    values="0;1;0"
+    dur="2s"
+    repeatCount="indefinite" />
+</svg>
+</svg>
